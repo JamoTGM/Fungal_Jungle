@@ -13,6 +13,7 @@ TagManager:
   - Door1
   - Key1
   - Tunnel
+  - key2
   layers:
   - Default
   - TransparentFX
