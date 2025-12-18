@@ -10,6 +10,9 @@ TagManager:
   - Char4
   - Char5
   - Char6
+  - Door1
+  - Key1
+  - Tunnel
   layers:
   - Default
   - TransparentFX
