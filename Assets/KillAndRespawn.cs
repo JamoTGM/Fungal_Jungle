@@ -6,7 +6,7 @@ public class KillAndRespawn : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Char4"))
+        if (other.CompareTag("WindAffectable"))
         {
             other.transform.position = respawnPoint.position;
         }
