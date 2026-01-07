@@ -8,7 +8,7 @@ public class EnableGravityTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the object entering the trigger is the player (or has a specific tag)
-        if (other.CompareTag("Char4"))
+        if (other.CompareTag("WindAffectable"))
         {
             // Get the Rigidbody2D component of the player
             Rigidbody2D playerRb = other.GetComponent<Rigidbody2D>();
