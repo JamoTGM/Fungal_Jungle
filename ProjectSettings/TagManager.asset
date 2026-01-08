@@ -15,6 +15,8 @@ TagManager:
   - Tunnel
   - key2
   - WindAffectable
+  - ControlZone
+  - GravityToggle
   layers:
   - Default
   - TransparentFX
