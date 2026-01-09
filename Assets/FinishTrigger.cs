@@ -5,13 +5,33 @@ public class FinishTrigger : MonoBehaviour
 {
     public GameObject levelCompleteUI;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    [Header("Key Settings")]
+    public string keyTag = "Key";
+    public bool keyCollected = false;
+
+    void Awake()
     {
-        if (collision.CompareTag("WindAffectable"))
-        {
-            CompleteLevel();
-        }
+        Time.timeScale = 1f;
+
+        if (levelCompleteUI != null)
+            levelCompleteUI.SetActive(false);
     }
+
+   private void OnTriggerEnter2D(Collider2D collision)
+{
+    if (!collision.CompareTag("WindAffectable")) return;
+
+    PlayerPickup pickup = collision.GetComponent<PlayerPickup>();
+
+    if (pickup == null || !pickup.keyCollected)
+    {
+        Debug.Log("Exit locked - key required");
+        return;
+    }
+
+    CompleteLevel();
+}
+
 
     void CompleteLevel()
     {
@@ -19,18 +39,18 @@ public class FinishTrigger : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    // Retry Button
     public void RetryLevel()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    // Exit Button
     public void ExitGame()
     {
         Time.timeScale = 1f;
         Application.Quit();
-        Debug.Log("Exit button pressed");
+        Debug.Log("Exit pressed");
     }
+
 }
+

@@ -17,6 +17,7 @@ TagManager:
   - WindAffectable
   - ControlZone
   - GravityToggle
+  - Key
   layers:
   - Default
   - TransparentFX
