@@ -17,20 +17,26 @@ public class FinishTrigger : MonoBehaviour
             levelCompleteUI.SetActive(false);
     }
 
-   private void OnTriggerEnter2D(Collider2D collision)
-{
-    if (!collision.CompareTag("WindAffectable")) return;
-
-    PlayerPickup pickup = collision.GetComponent<PlayerPickup>();
-
-    if (pickup == null || !pickup.keyCollected)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Exit locked - key required");
-        return;
+        if (!collision.CompareTag("WindAffectable")) return;
+
+        PlayerPickup pickup = collision.GetComponent<PlayerPickup>();
+        if (pickup == null)
+        {
+            Debug.Log("WindAffectable object missing PlayerPickup script!");
+            return;
+        }
+
+        if (!pickup.HasAllKeys())
+        {
+            Debug.Log("Exit locked - need more water! Collected: " + pickup.keysCollected);
+            return;
+        }
+
+        CompleteLevel();
     }
 
-    CompleteLevel();
-}
 
 
     void CompleteLevel()

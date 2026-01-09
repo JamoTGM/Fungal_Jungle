@@ -2,16 +2,22 @@ using UnityEngine;
 
 public class PlayerPickup : MonoBehaviour
 {
-    public bool keyCollected = false;
+    public int keysCollected = 0;  // Number of keys the player has
+    public int keysNeeded = 2;     // Total keys required to unlock exit
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Key"))
         {
-            keyCollected = true;
+            keysCollected++;
             collision.gameObject.SetActive(false);
-            Debug.Log("Key picked up by player");
+            Debug.Log("Key collected! Total keys: " + keysCollected);
         }
+    }
+
+    public bool HasAllKeys()
+    {
+        return keysCollected >= keysNeeded;
     }
 }
 
