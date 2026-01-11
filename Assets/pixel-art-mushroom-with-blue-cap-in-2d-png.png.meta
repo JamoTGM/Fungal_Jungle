@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 82a4dcf04176def4a9e5fbce45d6c269
+guid: 0e6cd48b18d673b48bc495f570834cfd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1377388024947856808
-    second: 396619020_1dfdf9f2-b5bb-4a80-b6c9-822256be2a19_0
+      213: -1710359674268338108
+    second: pixel-art-mushroom-with-blue-cap-in-2d-png_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 396619020_1dfdf9f2-b5bb-4a80-b6c9-822256be2a19_0
+      name: pixel-art-mushroom-with-blue-cap-in-2d-png_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 5000
-        height: 2803
+        x: 46
+        y: 20
+        width: 257
+        height: 291
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a5d4e86c177d1310800000000000000
-      internalID: 1377388024947856808
+      spriteID: 448351920f49348e0800000000000000
+      internalID: -1710359674268338108
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      396619020_1dfdf9f2-b5bb-4a80-b6c9-822256be2a19_0: 1377388024947856808
+      pixel-art-mushroom-with-blue-cap-in-2d-png_0: -1710359674268338108
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
